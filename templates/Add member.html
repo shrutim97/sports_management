@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<title>Add Member</title>
+
+<div style="padding-top: 30px;padding-left: 10px;padding-right: 10px;">
+
+<table border style="padding: 10px;border:3px solid black;text-align: center;width: 100%;height: 50%;border-collapse: collapse; ">
+
+               <tr style="height:50px;border-bottom: 3px solid black;border-left: 3px solid black">
+                <th ><bold>USN</bold></th>
+                <th><bold>Name</bold></th>
+                <th><bold>Sports</bold></th>
+               </tr>
+
+            {% for row in result %}
+
+                <tr style="height: 50px">
+                <td>{{row[0]}}</td>
+                <td>{{row[1]}}</td>
+                <td>{{row[2]}}</td>
+               </tr>
+         
+         {% endfor %}
+         
+  </table>
+</div>
+
+
+
+    <br>
+    <h2 style="padding-left:20px">Add Member to team</h1>
+    <h5 style="padding-left:20px">Note: Include the teams already part of.</h5>
+    <h5 style="padding-left:20px">Enter the details in Upper case Letters</h5>
+  <div >
+   <div >
+    <div >
+
+      <div style="padding: 15px">
+        <form action="http://localhost:5000/verify6 " method = 'POST'>
+          <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+            <div class="w3-half">
+            </div>
+            <div class="w3-half">
+              <input class="w3-input w3-border" type="text" placeholder="USN" required name="usn">
+            </div>
+
+          </div><br>
+            
+            <input class="w3-input w3-border" type="text" placeholder="Sports 1" required name="sports1"><br>
+            <input class="w3-input w3-border" type="text" placeholder="Sports 2(optional)"  name="sports2"><br>
+            <input class="w3-input w3-border" type="text" placeholder="Sports 3(optional)"  name="sports3"><br>
+          <button class="w3-button w3-red w3-section w3-centre" type="submit">Add Member</button>
+        </form>
+       
+    </div>
+  </div>
+</div>
+</div>
+
+</body>
+</html> 

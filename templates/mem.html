@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<title>Members</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+
+<style>
+body 
+html {
+    height: 100%;
+    font-family: "Inconsolata", sans-serif;
+  }
+.bgimg {
+    background-position: center;
+    background-size: cover;
+    background-image: url("http://png.pngtree.com/thumb_back/fw800/back_pic/04/46/54/29585756d57d349.jpg");
+    min-height: 75%;
+    opacity: 0.3;
+}
+.menu {
+    padding: 16px;
+    display: none;
+}
+</style>
+<body style="background-image: url(http://png.pngtree.com/thumb_back/fw800/back_pic/04/46/54/29585756d57d349.jpg ); width: 100%; height:20%;background-repeat: no-repeat; background-size: cover; back">
+
+<div class="w3-content" style="max-width:2000px;margin-top:40px">
+
+ 
+  <div class="w3-container w3-content w3-center w3-padding-20" style="max-width:1000px">
+  <h1 class="w3-wide"><bold><strong>MEMBERS</strong></bold></h1>
+    <table border style="padding: 10px;border:3px solid black;text-align: center;width: 100%;height: 50%;border-collapse: collapse; ">
+
+               <tr style="height:50px;border-bottom: 3px solid black;border-left: 3px solid black">
+                <th ><bold>USN</bold></th>
+                <th><bold>Name</bold></th>
+                <th><bold>Year</bold></th>
+                <th><bold>Gender</bold></th>
+                <th><bold>Sports</bold></th>
+               </tr>
+
+            {% for row in result %}
+
+                <tr style="height: 50px">
+                <td>{{row[0]}}</td>
+                <td>{{row[1]}}</td>
+                <td>{{row[2]}}</td>
+                <td>{{row[3]}}</td>
+                <td>{{row[4]}}</td>
+               </tr>
+         
+         {% endfor %}
+         
+      </table>
+  </div>
+</body>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+
+
+</body>
+</html>
