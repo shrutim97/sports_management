@@ -3,7 +3,7 @@ import pymysql
 
 #open database connection 
 def connect():
-    db = pymysql.connect("localhost","root","Shruti_menon@1997","sports")
+    db = pymysql.connect("localhost","root","password","sports")
     curr = db.cursor()
     return db,curr
 #creation of tables
